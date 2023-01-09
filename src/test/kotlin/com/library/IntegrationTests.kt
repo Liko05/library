@@ -25,7 +25,6 @@ class IntegrationTests @Autowired constructor(
 			.andExpect(status().isOk)
 			.andExpect(content().contentType(MediaType.APPLICATION_JSON))
 	}
-
 	@Test
 	fun testAuthor(){
 		mockMvc.perform(get("/authors/fef66227-8779-43f5-900a-9792bc2d3881"))
@@ -40,14 +39,17 @@ class IntegrationTests @Autowired constructor(
 					"\t\"books\": []\n" +
 					"}"))
 	}
-
 	@Test
 	fun testBooks() {
 		mockMvc.perform(get("/books"))
 			.andExpect(status().isOk)
 			.andExpect(content().contentType(MediaType.APPLICATION_JSON));
 	}
-
+	@Test
+	fun testBook(){
+		mockMvc.perform(get("/books/11111111-1111-1111-1111-111111111111"))
+			.andExpect(status().isNotFound)
+	}
 	@Test
 	fun testAddingBook(){
 		val result = mockMvc.perform(post("/books")

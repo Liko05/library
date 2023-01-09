@@ -1,8 +1,7 @@
 package com.library.dto.book
 
-import java.time.LocalDateTime
 import java.time.ZonedDateTime
-import java.util.UUID;
+import java.util.UUID
 
 data class BookInfo(
     val id: UUID,

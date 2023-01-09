@@ -1,6 +1,5 @@
 package com.library.controller
 
-import com.library.client.AuthorsClient
 import com.library.dto.author.AuthorBasic
 import com.library.dto.author.AuthorDetailed
 import com.library.service.AuthorService

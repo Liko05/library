@@ -1,10 +1,9 @@
 package com.library.model
 
 import org.springframework.data.annotation.Id
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZonedDateTime
-import java.util.*
+import java.util.UUID
 
 data class Book(
     @Id

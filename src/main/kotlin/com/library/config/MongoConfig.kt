@@ -2,8 +2,6 @@ package com.library.config
 
 import com.library.config.converter.ZonedDateTimeReadConverter
 import com.library.config.converter.ZonedDateTimeWriteConverter
-import com.mongodb.client.MongoClient
-import com.mongodb.client.MongoClients
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.convert.converter.Converter
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration
@@ -19,7 +17,6 @@ class MongoConfig : AbstractMongoClientConfiguration() {
     override fun getDatabaseName(): String {
         return "library"
     }
-
     override fun customConversions(): MongoCustomConversions {
         converters.add(ZonedDateTimeReadConverter())
         converters.add(ZonedDateTimeWriteConverter())

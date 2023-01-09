@@ -3,15 +3,13 @@ package com.library.repository.impl
 import com.library.model.Book
 import com.library.repository.BookRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.domain.Page
-import org.springframework.data.domain.PageImpl
 import org.springframework.data.domain.Pageable
 import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Component
-import java.util.*
+import java.util.UUID
 
 @Component
 class BookRepositoryImpl : BookRepository {
